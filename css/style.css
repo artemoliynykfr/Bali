@@ -1246,12 +1246,12 @@ li {
 
   header .start__form-item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   header .start__form-input {
-    width: 100%;
+    width: 100% !important;
   }
 
   .places__swiper .swiper-slide {
