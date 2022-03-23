@@ -1250,6 +1250,10 @@ li {
             flex: 0 1 100%;
   }
 
+  header .start__form-input {
+    width: 100%;
+  }
+
   .places__swiper .swiper-slide {
     max-width: 100%;
   }
