@@ -1,9 +1,24 @@
+// webp
+function testWebP(callback) {
+   var webP = new Image();
+   webP.onload = webP.onerror = function () {
+      callback(webP.height == 2);
+   };
+   webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+}
+testWebP(function (support) {
+   if (support == true) {
+      document.querySelector('body').classList.add('webp');
+   }else{
+      document.querySelector('body').classList.add('no-webp');
+   }
+});
 // header burger	
 function burgerMenu(){
 	const burger = document.querySelector('.burger')
 	const menu = document.querySelector('.menu')
 	const body = document.querySelector('body')
-	burger.addEventListener('click', () => {
+	burger.addEventListener('click', () => { 
 		if(!menu.classList.contains('active')){
 			menu.classList.add('active')
 			burger.classList.add('active-burger')
@@ -109,7 +124,6 @@ new Swiper('.places__swiper > .swiper-container', {
    speed: 1500,
    spaceBetween: 30,
    effect: "coverflow",
-   grabCursor: true,
    centeredSlides: true,
    slidesPerView: "auto",
    autoplay: {
@@ -148,18 +162,15 @@ new Swiper('.places__swiper > .swiper-container', {
 });
 new Swiper(".partners__swiper > .swiper-container", {
    direction: "horizontal",
-   loop: true,
-   freeMode: true,
+   loop: true, 
    spaceBetween: 46,
-   grabCursor: false,
    slidesPerView: "auto",
    loop: true,
    autoplay: {
-      delay: 1,
+      delay: 0,
       disableOnInteraction: false
    },
    speed: 5000,
-   freeModeMomentum: false,
  });
 new Swiper('.customers__swiper > .swiper-container', {
    direction: 'horizontal',
